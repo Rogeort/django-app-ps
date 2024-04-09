@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+{% include "point_sale/components/table.html" %}
+
+{% include "point_sale/components/foot.html" %}
+{% include "point_sale/components/modal.html" %}
+{% include "point_sale/components/toast.html" %}
+
+<script src="{% static "point_sale/js/main.js" %} "></script>
+<script src="{% static "point_sale/js/components/functions.js" %} "></script>
+
+{% endblock content %}

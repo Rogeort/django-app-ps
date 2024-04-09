@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="card m-4">
+    <div class="card-body">
+        
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Mount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sale in sale_list %}
+      <tr>
+        <td>{{ sale.date }}</td>
+        <td>{{ sale.product }}</td>
+        <td>{{ sale.price }}</td>
+        <td>{{ sale.quantity|floatformat:2}}</td>
+        <td>{{ sale.mount }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,122 @@
+<div
+  class="modal fade"
+  id="modalGetData"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="fixed-top">
+      <div class="alertPlaceholder"></div>
+    </div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h6></h6>
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="number" class="form-control"/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cerrar
+        </button>
+        <button id="modalAceptar-btn" type="button" class="btn btn-primary">
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="modalRegisterSale"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Summary</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title text-center pricing-card-title total">$0</h1>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input
+            id="ingresoUsuario"
+            type="number"
+            class="form-control"
+            placeholder="Ingresar pago"
+          />
+        </div>
+        <div class="alertPlaceholder"></div>
+
+        <div class="d-grid gap-2">
+          <!-- Contenedor para centrar -->
+          <button id="cambioDevuelto" type="button" class="btn btn-info">
+            Ingresa una cantidad para calcular el cambio
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          id="registerPago"
+          type="button"
+          class="btn btn-primary"
+          disabled
+        >
+          Understood
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade" id="modalError" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-3 mb-2 bg-danger text-white">
+      <div class="modal-body "></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
