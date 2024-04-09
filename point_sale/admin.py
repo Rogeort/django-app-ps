@@ -4,6 +4,7 @@ from .models import (Product, Group, Category, ProductAttribute, Sale, ProductAt
 
 class ProductsAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Product._meta.fields]
+    search_fields = ('product_name', 'product_code')
 admin.site.register(Product, ProductsAdmin)
 
 class GroupAdmin(admin.ModelAdmin):
@@ -52,5 +53,5 @@ admin.site.register(ProductPriceRecords)
 
 class SaleAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Sale._meta.fields]
-admin.site.register(Sale)
+admin.site.register(Sale, SaleAdmin)
 

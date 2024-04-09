@@ -10,27 +10,27 @@ function requestAJAX(url, data, successCall, errorCall) {
     method: "GET",
     data: { value: data },
     success: successCall,
-    error: function (jqXHR, xhr, status, error) {
-      msgError(status, jqXHR);
+    error: function (jqXHR) {
+      msgError(jqXHR);
     },
   });
 }
 
-function msgError(error, jqXHR) {
+function msgError(jqXHR) {
   let msg = "";
   switch (jqXHR.status) {
     case 500:
-      msg = " returned more than one product";
+      msg = " ERROR 500, probablemente registrado 2 o mas veces (atributos o producto )";
       break;
 
     case 404:
-      msg = " product";
+      msg = " Producto no registrado en la base de datos";
       break;
 
     default:
       break;
   }
-  modalError.find(".modal-body").text(error + " " +jqXHR.status +" " +msg);
+  modalError.find(".modal-body").text(msg);
   modalError.modal("show");
 }
 
